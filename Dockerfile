@@ -4,5 +4,5 @@ EXPOSE 500/udp
 WORKDIR /app 
 COPY app.py app.py
 COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
-RUN python app.py
+RUN echo "$(pip install -r requirements.txt)"
+RUN echo "$(python app.py | echo)"
