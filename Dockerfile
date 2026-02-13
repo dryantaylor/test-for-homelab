@@ -5,4 +5,4 @@ WORKDIR /app
 COPY app.py app.py
 COPY requirements.txt requirements.txt
 RUN echo "$(pip install -r requirements.txt)"
-RUN echo "$(python app.py | echo)"
+CMD python app.py
